@@ -1,0 +1,64 @@
+$transparent_white: #ffffff5c;
+$blue: #0093d7;
+
+.login {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../assets/plane.jpg");
+
+    .card {
+        background-color: $transparent_white;
+        display: flex;
+        flex-direction: column;
+        min-height: 15rem;
+        width: 20rem;
+        margin: auto 0;
+        position: absolute;
+        top: 40%;
+        transform: translate(0, -50%);
+        padding: 1rem;
+
+        %children {
+            margin: 0.8rem 0;
+            height: 2.5rem;
+        }
+        
+        %inputs {
+            border: none;
+        }
+
+        .username {
+            @extend %children;
+            @extend %inputs;
+        }
+
+        .password {
+            @extend %children;
+            @extend %inputs;
+        }
+
+        .loginButton {
+            @extend %children;
+            background: $blue;
+            width: 70%;
+            align-self: center;
+            border: none;
+            color: white;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .text {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #265487;
+        }
+    }
+}
